@@ -12,9 +12,9 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 60px;
+// }
 
 section {
   overflow: auto;
@@ -74,6 +74,17 @@ p {
   text-decoration: none;
   }
 }
+
+.navbar { background-color: #010101;}
+
+.navbar-brand {margin-top: 12px;}
+
+.nav li a { margin-top: 7px;}
+
+.navbar-form .form-control { margin-bottom: 0;}
+
+.navbar-form {padding-top: 5px;}
+
 
 /* footer */
 
@@ -287,3 +298,19 @@ span.picture {
     border: 0;
   }
 }
+
+/* 文字
+ */
+.md {font-size: 24px;}
+.bold { font-weight: bold; }
+
+
+/* Profile page */
+
+.skill h1 {text-align: left;}
+
+.skill .md {font-style: oblique;}
+
+.skills {text-align: left;}
+
+.topic p { display: inline-block;}

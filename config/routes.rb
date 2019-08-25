@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #memberメソッドによりユーザーidが含まれたものを扱う
   resources :users do
     member do
-      get:following, :followers
+      get:following, :followers, :profile
     end
   end
   resources :account_activations, only: [:edit]

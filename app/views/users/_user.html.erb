@@ -1,10 +1,12 @@
 <li>
   <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user %>
+  <%= link_to user.name, profile_user_path(user) %>
   <%# 二つ目の条件は、"user"がcurrent_userだとdeleteのリンクが表示されない
   つまり、admin user は自分自身を削除できない！ %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
+  <% if logged_in? %>
+    <% if current_user.admin? && !current_user?(user) %>
+      | <%= link_to "delete", user, method: :delete,
+                                    data: { confirm: "You sure?" } %>
+    <% end %>
   <% end %>
 </li>

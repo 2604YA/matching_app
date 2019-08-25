@@ -1,0 +1,45 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %><br><br>
+        <%= link_to "View posts", user_path(@user) %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
+ </aside>
+ <div class="col-md-8 skills">
+   <%= render 'follow_form' if logged_in? %>
+   <div class="skill">
+     <h1>I want to learn</h1>
+     <div class="topic">
+       <p class="md">computer programming<p>&nbsp;|&nbsp;
+       <p>Level : Beginner</p>
+     </div>
+     <div class="description">
+      <p class="bold">Description</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      </p>
+    </div>
+   </div>
+   <div class="skill">
+     <h1>I can teach you</h1>
+     <div class="topic">
+       <p class="md">Photoshop<p>&nbsp;|&nbsp;
+       <p>Level : Advanced</p>
+     </div>
+     <div class="description">
+      <p class="bold">Description</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      </p>
+    </div>
+   </div>
+ </div>
+</div>
+</div>
