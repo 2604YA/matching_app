@@ -20,6 +20,15 @@ class User < ApplicationRecord
   uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6}, allow_nil: true
+  with_options length: {maximum: 30} do
+    validates :skill_want
+    validates :skill_teach
+  end
+  with_options length: {maximum: 400} do
+    validates :skill_want_description
+    validates :skill_teach_description
+  end
+
 
   #self = User
   def self.digest(string)
