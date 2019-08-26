@@ -15,28 +15,64 @@
  <div class="col-md-8 skills">
    <%= render 'follow_form' if logged_in? %>
    <div class="skill">
-     <h1>I want to learn</h1>
      <div class="topic">
-       <p class="md">computer programming<p>&nbsp;|&nbsp;
-       <p>Level : Beginner</p>
+       <p class="md">I want to learn</p>&nbsp;&nbsp;
+       <p class="lg oblique">
+         <% if !@user.skill_want.nil? %>
+          <%= @user.skill_want %>
+        <% else %>
+          No data yet
+        <% end %>
+       <p>  &nbsp;&nbsp;
+       (&nbsp;
+       <p>Level :
+         <% if !@user.skill_want_level.nil? %>
+          <%= @user.skill_want_level %>
+         <% else %>
+          ---
+         <% end %>
+       </p>
+       &nbsp;)
      </div>
      <div class="description">
       <p class="bold">Description</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        <% if !@user.skill_want_description.nil? %>
+          <%= @user.skill_want_description %>
+        <% else %>
+          No description yet
+        <% end %>
       </p>
     </div>
    </div>
    <div class="skill">
-     <h1>I can teach you</h1>
      <div class="topic">
-       <p class="md">Photoshop<p>&nbsp;|&nbsp;
-       <p>Level : Advanced</p>
+       <p class="md">I can teach you</p>&nbsp;&nbsp;
+       <p class="lg oblique">
+         <% if !@user.skill_teach.nil? %>
+          <%= @user.skill_teach %>
+        <% else %>
+          No data yet
+        <% end %>
+       <p>&nbsp;&nbsp;
+       (&nbsp;
+       <p>Level :
+         <% if !@user.skill_teach_level.nil? %>
+          <%= @user.skill_teach_level %>
+         <% else %>
+          ---
+         <% end %>
+       </p>
+       &nbsp;)
      </div>
      <div class="description">
       <p class="bold">Description</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        <% if !@user.skill_teach_description.nil? %>
+          <%= @user.skill_teach_description %>
+        <% else %>
+          No description yet
+        <% end %>
       </p>
     </div>
    </div>
@@ -46,5 +82,4 @@
      </p>
    </div>
  </div>
-</div>
 </div>

@@ -11,5 +11,30 @@
 
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <div class="col-md-6">
+    <%= f.label :i_want_to_learn %>
+    <%= f.text_field :skill_want, class: 'form-control' %>
+
+    <%= f.label :level %>
+    <%= f.select :skill_want_level, [["1.beginner",1],["2.intermediate",2],
+    ["3.Advanced",3]], class: 'form-control' %>
+
+    <%= f.label :description %>
+    <%= f.text_area :skill_want_description, class: 'form-control description' %>
+
+    <%= f.label :i_can_teach_you %>
+    <%= f.text_field :skill_teach, class: 'form-control' %>
+
+    <%= f.label :level %>
+    <%= f.select :skill_teach_level, [["1.beginner",1],["2.intermediate",2],
+    ["3.Advanced",3]], class: 'form-control' %>
+
+    <%= f.label :description %>
+    <%= f.text_area :skill_teach_description, class: 'form-control description' %>
+  </div>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
