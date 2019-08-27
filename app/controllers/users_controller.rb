@@ -74,8 +74,8 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
          :password_confirmation, :skill_want, :skill_want_level,
-         :skill_want_description, :skill_teach, :skill_teach_level,
-         :skill_teach_description)
+        :skill_want_description, :skill_teach, :skill_teach_level,
+      :skill_teach_description)
     end
 
 #current_userならなんでも編集できちゃだめ

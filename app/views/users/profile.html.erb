@@ -26,10 +26,14 @@
        <p>  &nbsp;&nbsp;
        (&nbsp;
        <p>Level :
-         <% if !@user.skill_want_level.nil? %>
-          <%= @user.skill_want_level %>
+         <% if @user.skill_want_level == 1 %>
+            Beginner
+         <% elsif @user.skill_want_level == 2 %>
+            Intermediate
+         <% elsif @user.skill_want_level == 3 %>
+            Advanced
          <% else %>
-          ---
+            ---
          <% end %>
        </p>
        &nbsp;)
@@ -57,10 +61,14 @@
        <p>&nbsp;&nbsp;
        (&nbsp;
        <p>Level :
-         <% if !@user.skill_teach_level.nil? %>
-          <%= @user.skill_teach_level %>
-         <% else %>
+         <% if @user.skill_teach_level.nil? %>
           ---
+         <% elsif @user.skill_teach_level == 1 %>
+            Beginner
+         <% elsif @user.skill_teach_level == 2 %>
+            Intermediate
+         <% elsif @user.skill_teach_level == 3 %>
+            Advanced
          <% end %>
        </p>
        &nbsp;)
@@ -75,11 +83,6 @@
         <% end %>
       </p>
     </div>
-   </div>
-   <div class="edit">
-     <p>
-       <% link_to ""
-     </p>
    </div>
  </div>
 </div>

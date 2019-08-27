@@ -18,7 +18,7 @@
     <%= f.text_field :skill_want, class: 'form-control' %>
 
     <%= f.label :level %>
-    <%= f.select :skill_want_level, [["1.beginner",1],["2.intermediate",2],
+    <%= f.select :skill_want_level, [["---",nil],["1.beginner",1],["2.intermediate",2],
     ["3.Advanced",3]], class: 'form-control' %>
 
     <%= f.label :description %>
@@ -28,7 +28,7 @@
     <%= f.text_field :skill_teach, class: 'form-control' %>
 
     <%= f.label :level %>
-    <%= f.select :skill_teach_level, [["1.beginner",1],["2.intermediate",2],
+    <%= f.select :skill_teach_level, [["---",nil],["1.beginner",1],["2.intermediate",2],
     ["3.Advanced",3]], class: 'form-control' %>
 
     <%= f.label :description %>
