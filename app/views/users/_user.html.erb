@@ -1,6 +1,18 @@
 <li>
   <%= gravatar_for user, size: 50 %>
   <%= link_to user.name, profile_user_path(user) %>
+  <% if !user.skill_want.nil? %>
+    <%= user.skill_want %>
+  <% else %>
+    ---
+  <% end %>
+   /
+  <% if !user.skill_teach.nil? %>
+    <%= user.skill_teach %>
+  <% else %>
+    ---
+  <% end %>
+  <%# <%= render 'follow_form' if logged_in? %> 
   <%# 二つ目の条件は、"user"がcurrent_userだとdeleteのリンクが表示されない
   つまり、admin user は自分自身を削除できない！ %>
   <% if logged_in? %>

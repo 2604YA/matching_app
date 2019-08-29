@@ -85,6 +85,27 @@ p {
 
 .navbar-form {padding-top: 5px;}
 
+/* HOME */
+
+.top {
+  background: linear-gradient(rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)), url(deal.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+
+.top_text {
+  padding-top: 150px;
+  h1 { color: #fff; }
+  .btn {
+    border: solid 1px green;
+    color: #fff;
+    }
+  }
+
+
 
 /* footer */
 
@@ -326,3 +347,5 @@ span.picture {
 .skills {text-align: left;}
 
 .topic p { display: inline-block;}
+
+.align-center { text-align: center;}

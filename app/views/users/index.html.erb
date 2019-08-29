@@ -4,9 +4,8 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-  <% end %>
+  <%= render @users %>
+  <%# @users = User オブジェクトのリストだと自動で推測 %>
 </ul>
 
 <%= will_paginate %>

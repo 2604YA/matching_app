@@ -28,6 +28,14 @@ class User < ApplicationRecord
     validates :skill_want_description
     validates :skill_teach_description
   end
+  with_options presence: true do
+    validates :skill_want
+    validates :skill_want_level
+    validates :skill_want_description
+    validates :skill_teach
+    validates :skill_teach_level
+    validates :skill_teach_description
+  end
 
 
   #self = User
