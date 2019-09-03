@@ -4,7 +4,13 @@ User.create!(name:  "Example User",
                 password_confirmation: "foobar",
                 admin: true,
                 activated: true,
-                activated_at: Time.zone.now)
+                activated_at: Time.zone.now,
+                skill_want: "Programming",
+                skill_want_level: 1,
+                skill_want_description: "I wanna learn.",
+                skill_teach: "Photohsop",
+                skill_teach_level: 3,
+                skill_teach_description: "I wanna teach.",)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -15,7 +21,13 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password,
                activated: true,
-               activated_at: Time.zone.now)
+               activated_at: Time.zone.now,
+               skill_want: "Photohsop",
+               skill_want_level: 1,
+               skill_want_description: "I wanna learn.",
+               skill_teach: "Programming",
+               skill_teach_level: 3,
+               skill_teach_description: "I wanna teach.",)
 end
 
 users = User.order(:created_at).take(6)
