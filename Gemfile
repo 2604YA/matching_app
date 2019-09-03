@@ -40,9 +40,10 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.20.0'
-  gem 'rails_12factor', group: :production
-  gem 'fog', '1.42'
+  gem 'puma', '3.9.1'
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'redis'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
