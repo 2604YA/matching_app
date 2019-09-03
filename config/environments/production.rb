@@ -101,6 +101,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.web_socket_server_url = "wss://<thawing-stream-46133>.herokuapp.com/cable"
+  config.web_socket_server_url = "wss://thawing-stream-46133.herokuapp.com/cable"
 
 end
