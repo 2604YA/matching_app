@@ -69,6 +69,13 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  # def mutual
+  #   @title = "Mutual follow"
+  #   @user  = User.find(params[:id])
+  #   @users = @user.following & @user.followers.paginate(page: params[:page])
+  #   render 'show_follow'
+  # end
+
   private
 
     def user_params

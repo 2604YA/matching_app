@@ -8,7 +8,11 @@ class User < ApplicationRecord
                                     dependent:   :destroy
   #following = followed(active_raltionshipテーブル上の)
   has_many :following, through: :active_relationships, source: :followed
+  #source: :folollowerは書かなくてもいいが上との待避のため書いてる
+  #following の方は,followeds でもいいが、わかりづらいので名前を変えてる
+  #もともとは followed ということを source: :followed で表してる
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :messages
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
@@ -116,6 +120,13 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  def mutual?(other_user)
+    following.include?(other_user) && followers.include?(other_user)
+  end
+
+
+
 
 
   private

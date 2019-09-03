@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'chatrooms', to: 'chat_rooms#index'
+
+  post 'message', to: 'messages#create'
+  mount ActionCable.server, at: '/cable'
+
   get 'password_resets/new'
-
   get 'password_resets/edit'
-
   get 'sessions/new'
 
   root 'home_pages#home'
@@ -18,7 +21,7 @@ Rails.application.routes.draw do
   #memberメソッドによりユーザーidが含まれたものを扱う
   resources :users do
     member do
-      get:following, :followers, :profile
+      get:following, :followers, :mutual, :profile
     end
   end
   resources :account_activations, only: [:edit]

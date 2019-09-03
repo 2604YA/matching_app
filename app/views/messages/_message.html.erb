@@ -1,0 +1,19 @@
+<% if message.user == current_user %>
+  <div class="kaiwa"">
+    <p class="align-right"><%= message.user.name %></p>
+   <div class="kaiwa-text-left">
+     <p class="kaiwa-text">
+       <%= message.body %>
+     </p>
+   </div>
+  </div>
+<% else %>
+  <div class="kaiwa"">
+    <p class="align-left"><%= message.user.name %></p>
+   <div class="kaiwa-text-right">
+     <p class="kaiwa-text">
+       <%= message.body %>
+     </p>
+   </div>
+  </div>
+<% end %>
