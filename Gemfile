@@ -40,7 +40,6 @@ group :test do
 end
 
 group :production do
-  gem 'puma', '3.9.1'
   gem 'pg'
   gem 'rails_12factor'
   gem 'redis'
